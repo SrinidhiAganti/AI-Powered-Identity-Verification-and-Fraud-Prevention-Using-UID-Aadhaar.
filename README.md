@@ -19,6 +19,11 @@ This project implements an AI-based identity verification and fraud detection sy
 
 ## Dataset
 Uses open-source and synthetic Aadhaar-style datasets (Kaggle).
+● nagendra048/aadhar-dataset (Kaggle) — field images for OCR and detection.
+● nagendra048/pan-card-dataset (Kaggle) — PAN card images for multi-doc
+support.
+● varunkumargera/aadhar-images (Kaggle) — alternative Aadhaar images.
+● sparsh2002/govtiddataset (Kaggle) — mixed govt ID images.
 
 ## How to Run
 ```bash
