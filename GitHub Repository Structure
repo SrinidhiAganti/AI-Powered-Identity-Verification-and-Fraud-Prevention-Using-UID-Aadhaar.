@@ -1,0 +1,38 @@
+AI-Aadhaar-Fraud-Detection/
+│
+├── README.md
+├── requirements.txt
+├── .gitignore
+│
+├── data/
+│   ├── raw/
+│   ├── processed/
+│   └── synthetic/
+│
+├── notebooks/
+│   ├── 01_data_preprocessing.ipynb
+│   ├── 02_ocr_experiments.ipynb
+│   └── 03_fraud_detection.ipynb
+│
+├── src/
+│   ├── ocr/
+│   │   ├── ocr_engine.py
+│   │   └── text_validation.py
+│   │
+│   ├── fraud_detection/
+│   │   ├── tamper_classifier.py
+│   │   └── face_match.py
+│   │
+│   ├── preprocessing/
+│   │   └── image_preprocess.py
+│   │
+│   └── api/
+│       └── app.py
+│
+├── models/
+│   └── README.md
+│
+├── docs/
+│   └── AI-Powered Identity Verification and Fraud Prevention Using UID Aadhaar.pdf
+│
+└── screenshots/
