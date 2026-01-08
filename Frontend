@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Aadhaar Identity Verification</title>
+
+    <!-- ===== CSS ===== -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 460px;
+            margin: 70px auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1a237e;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .upload-section {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .upload-section label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="file"] {
+            margin-bottom: 15px;
+        }
+
+        button {
+            padding: 10px 24px;
+            background-color: #1a73e8;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0f5bd4;
+        }
+
+        .result-section {
+            background: #f1f5ff;
+            padding: 15px;
+            border-radius: 6px;
+        }
+
+        .result-section h3 {
+            margin-top: 0;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>AI-Powered Aadhaar Verification</h1>
+    <p class="subtitle">Identity Verification & Fraud Prevention</p>
+
+    <div class="upload-section">
+        <label>Upload Aadhaar Document</label>
+        <input type="file" id="fileInput" accept="image/*">
+        <br>
+        <button onclick="verifyDocument()">Verify Identity</button>
+    </div>
+
+    <div class="result-section">
+        <h3>Verification Result</h3>
+        <p><strong>Status:</strong> <span id="status">Waiting...</span></p>
+        <p><strong>Aadhaar Validation:</strong> <span id="aadhaar">—</span></p>
+        <p><strong>Fraud Risk Score:</strong> <span id="fraud">—</span></p>
+    </div>
+</div>
+
+<!-- ===== JavaScript ===== -->
+<script>
+    function verifyDocument() {
+        const fileInput = document.getElementById("fileInput");
+        const status = document.getElementById("status");
+        const aadhaar = document.getElementById("aadhaar");
+        const fraud = document.getElementById("fraud");
+
+        if (fileInput.files.length === 0) {
+            alert("Please upload Aadhaar image");
+            return;
+        }
+
+        status.innerText = "Processing using AI-OCR...";
+        aadhaar.innerText = "Verifying...";
+        fraud.innerText = "Calculating...";
+
+        // Simulated AI processing
+        setTimeout(() => {
+            status.innerText = "Verification Completed ✔";
+            aadhaar.innerText = "Valid Aadhaar";
+            fraud.innerText = "Low Risk (0.15)";
+        }, 2000);
+    }
+</script>
+
+</body>
+</html>
